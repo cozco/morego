@@ -1,3 +1,3 @@
-FROM golang:latest-alpine as cosgo
+FROM golang:latest as cosgo
 WORKDIR '/go/src/app'
 COPY . .
