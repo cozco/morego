@@ -1,0 +1,7 @@
+version: '3'
+services:
+  go:
+    build:
+      context: https://github.com/cozco/morego
+      
+
