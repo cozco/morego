@@ -7,11 +7,12 @@ func main() {
 	a := 10
 
 	b := func(x int) int {
-		b := x * 2
-		fmt.Println(b)
-		return b
+		c := x * 2
+		fmt.Println(c)
+		return c
 	}
 
 	b(a)
+	fmt.Printf("%T", b)
 
 }

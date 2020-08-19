@@ -7,13 +7,26 @@ import (
 type add int
 
 func main() {
-	fmt.Println("Hello, playground")
+	var a add = 3
+	// var b add = 3
+	// var c add = 4
+
+	b := a.adder()
+	c := a.adder()
+
+	fmt.Println(b())
+	fmt.Println(b())
+	fmt.Println(b())
+	fmt.Println(c())
+	fmt.Println(c())
+
 }
 
-// func (a add) adder (i int) int{
-// 	var x int
-// 	{
-// 		x++
-// 		return x
-// 	}
-// }
+func (a add) adder() func() int {
+	var x int
+
+	return func() int {
+		x++
+		return x * int(a)
+	}
+}
