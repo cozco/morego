@@ -5,5 +5,17 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello, playground")
+
+	ms := "Cosmos"
+
+	strRev(ms)
+}
+
+func strRev(s string) string {
+	var rs string
+	for _, v := range s {
+		rs = string(v) + rs
+	}
+	fmt.Println(rs)
+	return rs
 }
